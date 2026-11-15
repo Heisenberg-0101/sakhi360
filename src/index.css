@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #E8F3F4;
+    color: #0F172A;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.medical-canvas {
+  background-color: #E8F3F4;
+  background-image:
+    radial-gradient(circle at 15% 10%, rgba(13, 148, 136, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 88% 12%, rgba(14, 116, 144, 0.09) 0%, transparent 42%),
+    linear-gradient(to right, rgba(13, 148, 136, 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 148, 136, 0.055) 1px, transparent 1px),
+    linear-gradient(165deg, #E6F2F3 0%, #F2F9FA 50%, #E3EFF1 100%);
+  background-size: 100% 100%, 100% 100%, 28px 28px, 28px 28px, 100% 100%;
+  background-attachment: fixed;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
